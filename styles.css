@@ -6,8 +6,8 @@
   --muted: #c8bfae;
   --line: rgba(244, 235, 214, 0.24);
   --panel: rgba(247, 241, 225, 0.085);
-  --teal: #91d7c3;
-  --teal-soft: rgba(145, 215, 195, 0.18);
+  --teal: #b8d8c9;
+  --teal-soft: rgba(184, 216, 201, 0.12);
   --graphite: #ebe1cb;
   --shadow: rgba(0, 0, 0, 0.38);
   --max: 1120px;
@@ -26,7 +26,7 @@ body {
   background:
     linear-gradient(180deg, rgba(10, 11, 9, 0.08), rgba(10, 11, 9, 0.9) 42%, rgba(10, 11, 9, 0.96)),
     radial-gradient(circle at 78% 10%, rgba(235, 225, 198, 0.2), transparent 24rem),
-    radial-gradient(circle at 20% 0%, rgba(145, 215, 195, 0.16), transparent 30rem),
+    radial-gradient(circle at 18% 0%, rgba(235, 225, 198, 0.08), transparent 26rem),
     url("assets/world-model-hero.png"),
     linear-gradient(180deg, var(--paper), var(--paper-deep));
   background-attachment: scroll, scroll, scroll, fixed, scroll;
@@ -69,7 +69,7 @@ a {
   margin: 0;
   padding: 10px 12px 10px 16px;
   transform: translateX(-50%);
-  background: rgba(15, 16, 13, 0.34);
+  background: rgba(13, 14, 12, 0.62);
   border: 1px solid rgba(244, 235, 214, 0.12);
   border-radius: 8px;
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.18);
