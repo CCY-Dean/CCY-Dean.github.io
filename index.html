@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="什么也不知道 - 一个关于电子信息、具身智能、VLA 与 World Model 的个人主页。"
+    />
+    <title>什么也不知道</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Back to top">什么也不知道</a>
+      <nav class="nav-links" aria-label="Section navigation">
+        <a href="#education" data-i18n="navEducation">教育</a>
+        <a href="#research" data-i18n="navResearch">方向</a>
+        <a href="#publications" data-i18n="navPublications">成果</a>
+        <a href="#open-source" data-i18n="navOpenSource">开源</a>
+        <a href="#contact" data-i18n="navContact">联系</a>
+      </nav>
+      <button class="lang-toggle" type="button" aria-label="Switch language">
+        <span data-lang-label>EN</span>
+      </button>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <h1 id="hero-title" data-i18n="heroTitle">什么也不知道</h1>
+        </div>
+        <figure class="hero-visual">
+          <img src="assets/world-model-hero.png" alt="Abstract world model visual" />
+        </figure>
+      </section>
+
+      <section class="section education" id="education" aria-labelledby="education-title">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="educationKicker">Education</p>
+          <h2 id="education-title" data-i18n="educationTitle">教育经历</h2>
+        </div>
+        <div class="education-grid">
+          <article class="education-card">
+            <p class="year" data-i18n="eduOneYear">本科阶段</p>
+            <h3 data-i18n="eduOneSchool">华南师范大学</h3>
+            <p class="degree" data-i18n="eduOneDegree">电子信息工程</p>
+          </article>
+          <article class="education-card">
+            <p class="year" data-i18n="eduTwoYear">研究生阶段</p>
+            <h3 data-i18n="eduTwoSchool">南方科技大学</h3>
+            <p class="degree" data-i18n="eduTwoDegree">电子信息（保研）</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section research" id="research" aria-labelledby="research-title">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="researchKicker">Research Direction</p>
+          <h2 id="research-title" data-i18n="researchTitle">研究方向</h2>
+        </div>
+        <div class="research-list">
+          <article>
+            <span>01</span>
+            <h3 data-i18n="topicOneTitle">Embodied Intelligence</h3>
+          </article>
+          <article>
+            <span>02</span>
+            <h3 data-i18n="topicTwoTitle">Vision-Language-Action</h3>
+          </article>
+          <article>
+            <span>03</span>
+            <h3 data-i18n="topicThreeTitle">World Model</h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="section publications" id="publications" aria-labelledby="publications-title">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="pubKicker">Publications</p>
+          <h2 id="publications-title" data-i18n="pubTitle">科研成果</h2>
+        </div>
+        <div class="empty-state">
+          <p data-i18n="pubBody">Coming soon.</p>
+        </div>
+      </section>
+
+      <section class="section open-source" id="open-source" aria-labelledby="open-source-title">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="openSourceKicker">Open Source</p>
+          <h2 id="open-source-title" data-i18n="openSourceTitle">开源项目</h2>
+        </div>
+        <div class="empty-state">
+          <p data-i18n="openSourceBody">Projects will be updated soon.</p>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="section-heading">
+          <p class="section-kicker" data-i18n="contactKicker">Contact</p>
+          <h2 id="contact-title" data-i18n="contactTitle">联系方式</h2>
+        </div>
+        <div class="contact-links" aria-label="Contact placeholders">
+          <a href="mailto:qiuxinanccy@gmail.com">
+            <span>Email</span>
+            <strong>qiuxinanccy@gmail.com</strong>
+          </a>
+          <a href="https://github.com/CCY-Dean" target="_blank" rel="noreferrer">
+            <span>GitHub</span>
+            <strong>github.com/CCY-Dean</strong>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span data-i18n="footerText">© 2026 什么也不知道</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
