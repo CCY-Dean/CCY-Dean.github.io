@@ -64,6 +64,16 @@ const translations = {
 let currentLanguage = "zh";
 const toggle = document.querySelector(".lang-toggle");
 const label = document.querySelector("[data-lang-label]");
+const fontOptions = document.querySelectorAll("[data-font-option]");
+
+function applyFont(font) {
+  document.body.dataset.font = font;
+  localStorage.setItem("preferredChineseFont", font);
+  fontOptions.forEach((option) => {
+    option.classList.toggle("is-active", option.dataset.fontOption === font);
+  });
+}
+
 
 function applyLanguage(language) {
   document.documentElement.lang = language === "zh" ? "zh-CN" : "en";
@@ -79,4 +89,9 @@ toggle.addEventListener("click", () => {
   applyLanguage(currentLanguage === "zh" ? "en" : "zh");
 });
 
+fontOptions.forEach((option) => {
+  option.addEventListener("click", () => applyFont(option.dataset.fontOption));
+});
+
+applyFont(localStorage.getItem("preferredChineseFont") || "kai");
 applyLanguage(currentLanguage);
