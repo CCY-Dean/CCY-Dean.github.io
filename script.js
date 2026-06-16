@@ -38,7 +38,7 @@ const translations = {
     openSourceHint: "项目复现详情",
     contactKicker: "Contact",
     contactTitle: "联系方式",
-    footerText: "© 2026 什么也不知道",
+    footerText: "© 2026 Canyang Chen",
   },
   en: {
     navEducation: "Education",
@@ -79,7 +79,7 @@ const translations = {
     openSourceHint: "View reproductions",
     contactKicker: "Contact",
     contactTitle: "Contact",
-    footerText: "© 2026 Knows Nothing",
+    footerText: "© 2026 Canyang Chen",
   },
 };
 
