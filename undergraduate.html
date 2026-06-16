@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="陈灿阳的本科经历：华南师范大学电子信息工程，课程、科研项目、竞赛与技能。"
+    />
+    <title>本科经历 - 什么也不知道</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=compact-20260616" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="index.html">什么也不知道</a>
+      <nav class="nav-links" aria-label="Section navigation">
+        <a href="index.html#education">教育</a>
+        <a href="index.html#research">方向</a>
+        <a href="projects.html">项目复现</a>
+        <a href="index.html#contact">联系</a>
+      </nav>
+      <a class="lang-toggle" href="index.html">首页</a>
+    </header>
+
+    <main class="page-main">
+      <section class="subpage-hero">
+        <p class="section-kicker">Undergraduate</p>
+        <h1>本科经历</h1>
+        <p>
+          华南师范大学电子信息工程本科阶段，围绕电子信息、深度学习、无线感知、嵌入式系统与竞赛项目逐步建立工程和研究基础。
+        </p>
+      </section>
+
+      <section class="section page-section">
+        <div class="detail-grid">
+          <article class="detail-card">
+            <p class="year">2022.09 - 2026.06</p>
+            <h2>华南师范大学</h2>
+            <p class="degree">电子信息工程 · 本科</p>
+            <p>GPA 3.45 / 4.00，专业排名 3 / 87。</p>
+          </article>
+          <article class="detail-card">
+            <p class="year">Core Courses</p>
+            <h2>核心课程</h2>
+            <ul class="clean-list">
+              <li>信号与系统、电路分析基础、通信电子电路</li>
+              <li>模式识别与机器学习、数字信号处理</li>
+              <li>电磁场与电磁波</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section page-section">
+        <div class="section-heading">
+          <p class="section-kicker">Research & Projects</p>
+          <h2>科研与项目</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>2025.04</span>
+            <h3>融合 CSI 幅度相位信息的智能手势识别方法</h3>
+            <div class="experience-block">
+              <h4>项目内容</h4>
+              <p>
+                设计并实现一种融合 CSI 幅度和相位信息的非接触式手势识别方法，解决传统视觉方案隐私性差、穿戴设备不便的问题。通过小波去噪、样条插值、相位解卷绕与线性校准等手段提升信号质量，结合多尺度通道注意力机制融合特征，最后使用 ResNet-18 模型实现 6 类手势识别，识别准确率接近 100%。
+              </p>
+              <h4>承担工作</h4>
+              <p>
+                负责 CSI 数据的预处理流程设计，包括相位校准与异常值剔除；查阅最新文献，寻找新思路新方法；实现小波去噪与样条插值算法，优化信号质量；使用 PyTorch 搭建并训练深度学习模型，完成手势分类任务；撰写并完成发明专利申请文档，独立负责技术方案、实施例与附图说明部分。
+              </p>
+            </div>
+          </article>
+          <article>
+            <span>2025.06</span>
+            <h3>Wi-Fi CSI 联合活动识别与室内定位</h3>
+            <div class="experience-block">
+              <h4>项目内容</h4>
+              <p>
+                提出一种融合 SE1D 注意力机制、Xception Time 模型与自动加权损失的深度学习框架，实现 Wi-Fi CSI 的联合人体活动识别与室内定位（JARIL）。该方法能有效建模信道特征间依赖关系，显著提升识别与定位性能。实验结果表明，该框架的活动识别准确率达到 91.96%，定位精度为 100%，优于 Baseline。
+              </p>
+              <h4>承担工作</h4>
+              <p>
+                主导整体框架设计，提出将 SE1D 注意力机制与 Xception Time 网络结合的创新思路；独立完成 CSI 数据预处理，包括小波去噪与特征归一化；完成模型搭建与 PyTorch 编程实现；负责实验结果可视化与性能分析，撰写论文主体内容并进行修改定稿，作为第一作者成功发表。
+              </p>
+            </div>
+          </article>
+          <article>
+            <span>2025.08</span>
+            <h3>电路模型探究装置</h3>
+            <div class="experience-block">
+              <h4>项目内容</h4>
+              <p>
+                基于 STM32F407ZGT6 主控，使用片内 DAC 与 AD9959 模块，结合模拟开关模块实现可调幅度、可调频率的正弦波信号发生器，并使用 AD637 有效值模块以及单片机片内 ADC 对未知模型电路进行扫频，得出其幅频特性曲线。根据幅频特性曲线，使用算法得出滤波器的结构和参数；使用片内 ADC 采集信号并进行 FFT，得到幅度谱后乘上幅频特性曲线系数，再进行 IFFT 输出波形。
+              </p>
+              <h4>承担工作</h4>
+              <p>
+                担任队长，负责整体框架设计和代码实现；使用单片机片内 DAC 生成任意波形，驱动 AD9959 产生正弦波；控制片内 ADC 采样率以控制 FFT 的频谱分辨率并减少频谱泄露；对 ADC 采集数据进行 FFT 和数据处理后再进行 IFFT 生成波表数据，最终使用 DAC 输出波形。项目获得全国二等奖。
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section page-section">
+        <div class="section-heading">
+          <p class="section-kicker">Awards & Skills</p>
+          <h2>竞赛与技能</h2>
+        </div>
+        <div class="detail-grid">
+          <article class="detail-card">
+            <h3>竞赛奖项</h3>
+            <ul class="clean-list">
+              <li>全国大学生电子设计竞赛 国赛二等奖</li>
+              <li>蓝桥杯全国软件和信息技术专业人才大赛 国赛三等奖</li>
+              <li>校级优秀志愿者</li>
+            </ul>
+          </article>
+          <article class="detail-card">
+            <h3>技能方向</h3>
+            <ul class="clean-list">
+              <li>深度学习、无线感知、嵌入式开发</li>
+              <li>MATLAB、PyTorch、单片机开发工具、Git</li>
+              <li>文献查阅、开源代码复现、模型搭建与论文写作</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section page-section">
+        <div class="section-heading">
+          <p class="section-kicker">Achievements</p>
+          <h2>成果与证明</h2>
+        </div>
+        <div class="achievement-grid">
+          <article class="achievement-card">
+            <span>推免录取</span>
+            <h3>南方科技大学 · 电子信息</h3>
+            <p>
+              通过南方科技大学卓越工程师学院推荐免试复试考核，获得电子信息专业硕士待录取资格。
+            </p>
+          </article>
+          <article class="achievement-card">
+            <span>论文录用</span>
+            <h3>CISCE 2025 · 第一作者</h3>
+            <p>
+              论文《A Deep Learning Framework for Joint Activity Recognition and Indoor Localization Using Wi-Fi CSI》被第七届 IEEE 通信、信息系统与计算机工程国际会议录用。
+            </p>
+          </article>
+          <article class="achievement-card">
+            <span>发明专利</span>
+            <h3>智能手势识别方法</h3>
+            <p>
+              参与发明专利《一种融合 CSI 幅度相位信息的智能手势识别方法》，申请号 2025104811780，已获国家知识产权局受理。
+            </p>
+          </article>
+          <article class="achievement-card">
+            <span>竞赛奖项</span>
+            <h3>全国大学生电子设计竞赛</h3>
+            <p>
+              2025 年全国大学生电子设计竞赛本科组全国二等奖，参赛项目为电路模型探究装置。
+            </p>
+          </article>
+          <article class="achievement-card">
+            <span>竞赛奖项</span>
+            <h3>蓝桥杯全国总决赛</h3>
+            <p>
+              蓝桥杯全国软件和信息技术专业人才大赛全国总决赛单片机设计与开发大学组三等奖。
+            </p>
+          </article>
+          <article class="achievement-card">
+            <span>奖学金</span>
+            <h3>华南师范大学优秀学生奖学金</h3>
+            <p>
+              获 2023-2024 学年综合奖学金二等奖、2024-2025 学年优秀学生奖学金二等奖。
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 什么也不知道</span>
+    </footer>
+  </body>
+</html>

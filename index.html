@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=compact-20260616" />
   </head>
   <body>
     <header class="site-header" aria-label="Primary navigation">
@@ -50,11 +50,17 @@
           <article class="education-card">
             <p class="year" data-i18n="eduOneYear">本科阶段</p>
             <h3 data-i18n="eduOneSchool">华南师范大学</h3>
+            <p class="period" data-i18n="eduOnePeriod">2022-2026</p>
             <p class="degree" data-i18n="eduOneDegree">电子信息工程</p>
+            <a class="inline-link" href="undergraduate.html">
+              <span data-i18n="eduOneLink">本科经历</span>
+              <small data-i18n="linkHint">点击查看详情</small>
+            </a>
           </article>
           <article class="education-card">
             <p class="year" data-i18n="eduTwoYear">研究生阶段</p>
             <h3 data-i18n="eduTwoSchool">南方科技大学</h3>
+            <p class="period" data-i18n="eduTwoPeriod">2026-2029</p>
             <p class="degree" data-i18n="eduTwoDegree">电子信息（保研）</p>
           </article>
         </div>
@@ -68,15 +74,11 @@
         <div class="research-list">
           <article>
             <span>01</span>
-            <h3 data-i18n="topicOneTitle">Embodied Intelligence</h3>
+            <h3 data-i18n="topicOneTitle">Vision-Language-Action</h3>
           </article>
           <article>
             <span>02</span>
-            <h3 data-i18n="topicTwoTitle">Vision-Language-Action</h3>
-          </article>
-          <article>
-            <span>03</span>
-            <h3 data-i18n="topicThreeTitle">World Model</h3>
+            <h3 data-i18n="topicTwoTitle">World Model</h3>
           </article>
         </div>
       </section>
@@ -86,8 +88,23 @@
           <p class="section-kicker" data-i18n="pubKicker">Publications</p>
           <h2 id="publications-title" data-i18n="pubTitle">科研成果</h2>
         </div>
-        <div class="empty-state">
-          <p data-i18n="pubBody">Coming soon.</p>
+        <div class="publication-list">
+          <article class="publication-card">
+            <h3>When to Trust Imagination: Adaptive Action Execution for World Action Models</h3>
+            <p data-i18n="paperBody">
+              CCF-A 在投二作，参与 World Action Model 方向论文工作。
+            </p>
+            <div class="publication-actions">
+              <a class="inline-link" href="https://arxiv.org/abs/2605.06222" target="_blank" rel="noreferrer">
+                <span>arXiv</span>
+                <small data-i18n="paperLinkHint">查看论文</small>
+              </a>
+              <a class="inline-link" href="https://my.feishu.cn/wiki/Lk8pwF8xBiohuYk1dy0cIigonZe?from=from_copylink" target="_blank" rel="noreferrer">
+                <span data-i18n="paperDocLink">查看详情</span>
+                <small data-i18n="paperDocHint">飞书文档</small>
+              </a>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -97,7 +114,11 @@
           <h2 id="open-source-title" data-i18n="openSourceTitle">开源项目</h2>
         </div>
         <div class="empty-state">
-          <p data-i18n="openSourceBody">Projects will be updated soon.</p>
+          <p data-i18n="openSourceBody">已整理 FastWAM、Motus、lingbot-va 的复现记录。</p>
+          <a class="inline-link project-entry-link" href="projects.html">
+            <span data-i18n="openSourceLink">FastWAM · Motus · lingbot-va</span>
+            <small data-i18n="openSourceHint">项目复现详情</small>
+          </a>
         </div>
       </section>
 
@@ -123,6 +144,6 @@
       <span data-i18n="footerText">© 2026 什么也不知道</span>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=compact-20260616"></script>
   </body>
 </html>
