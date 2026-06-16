@@ -586,6 +586,12 @@ h3 {
   color: var(--ink);
 }
 
+.project-team {
+  margin: -4px 0 18px;
+  color: var(--teal);
+  font-weight: 600;
+}
+
 .experience-block {
   display: grid;
   gap: 10px;
