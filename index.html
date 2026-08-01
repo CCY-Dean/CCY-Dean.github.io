@@ -8,13 +8,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button id="lang-toggle" type="button" aria-label="Switch language">中文</button>
+
   <div class="container">
     <header>
       <img class="profile" src="assets/profile.jpg" alt="Canyang Chen">
       <div class="intro">
-        <h1>Canyang Chen</h1>
-        <p class="affiliation">M.S. Student in Electronic Information<br>
-        Southern University of Science and Technology (SUSTech)</p>
+        <h1>
+          <span class="lang-en">Canyang Chen</span><span class="lang-zh">陈灿阳</span>
+        </h1>
+        <p class="affiliation">
+          <span class="lang-en">M.S. Student in Electronic Information<br>
+          Southern University of Science and Technology (SUSTech)</span>
+          <span class="lang-zh">电子信息专业 硕士研究生<br>
+          南方科技大学</span>
+        </p>
         <nav class="links">
           <a href="mailto:1712794418@qq.com">Email</a> /
           <a href="https://github.com/CCY-Dean" target="_blank" rel="noopener">GitHub</a>
@@ -24,29 +32,61 @@
 
     <main>
       <section id="about">
-        <h2>About</h2>
-        <p>I am a first-year master's student in Electronic Information at the
-        Southern University of Science and Technology (SUSTech). My research focuses on
-        <strong>World Action Models</strong> and <strong>Vision-Language-Action (VLA) models</strong>
-        for embodied intelligence.</p>
+        <h2><span class="lang-en">About</span><span class="lang-zh">关于我</span></h2>
+        <p>
+          <span class="lang-en">I am a first-year master's student in Electronic Information at the
+          Southern University of Science and Technology (SUSTech). My research focuses on
+          <strong>World Action Models</strong> and <strong>Vision-Language-Action (VLA) models</strong>
+          for embodied intelligence.</span>
+          <span class="lang-zh">我是南方科技大学电子信息专业的一年级硕士生，
+          研究方向为面向具身智能的<strong>世界动作模型（World Action Model）</strong>和
+          <strong>视觉-语言-动作模型（VLA）</strong>。</span>
+        </p>
       </section>
 
       <section id="education">
-        <h2>Education</h2>
+        <h2><span class="lang-en">Education</span><span class="lang-zh">教育经历</span></h2>
         <ul class="item-list">
           <li>
-            <span class="item-title">M.S. in Electronic Information, Southern University of Science and Technology (SUSTech)</span>
-            <span class="item-date">2026 – 2029 (expected)</span>
+            <span class="item-title">
+              <span class="lang-en">M.S. in Electronic Information, Southern University of Science and Technology (SUSTech)</span>
+              <span class="lang-zh">南方科技大学，电子信息专业，硕士</span>
+            </span>
+            <span class="item-date">
+              <span class="lang-en">2026 – 2029 (expected)</span>
+              <span class="lang-zh">2026 – 2029（预计）</span>
+            </span>
           </li>
           <li>
-            <span class="item-title">B.Eng. in Electronic Information Engineering, South China Normal University (SCNU)</span>
+            <span class="item-title">
+              <span class="lang-en">B.Eng. in Electronic Information Engineering, South China Normal University (SCNU)</span>
+              <span class="lang-zh">华南师范大学，电子信息工程专业，本科</span>
+            </span>
             <span class="item-date">2022 – 2026</span>
           </li>
         </ul>
       </section>
 
+      <section id="experience">
+        <h2><span class="lang-en">Experience</span><span class="lang-zh">实习经历</span></h2>
+        <ul class="item-list">
+          <!-- TODO: add internships; duplicate this block for each position -->
+          <li>
+            <span class="item-title">
+              <span class="lang-en">Research Intern, Company / Lab Name</span>
+              <span class="lang-zh">公司 / 实验室名称，研究实习生</span>
+            </span>
+            <span class="item-date">20XX – 20XX</span>
+            <span class="item-desc">
+              <span class="lang-en">Brief description of what you worked on.</span>
+              <span class="lang-zh">简要描述实习期间的工作内容。</span>
+            </span>
+          </li>
+        </ul>
+      </section>
+
       <section id="publications">
-        <h2>Publications</h2>
+        <h2><span class="lang-en">Publications</span><span class="lang-zh">论文发表</span></h2>
         <ul class="item-list">
           <!-- TODO: add publications; duplicate this block for each paper -->
           <li>
@@ -59,7 +99,7 @@
       </section>
 
       <section id="contact">
-        <h2>Contact</h2>
+        <h2><span class="lang-en">Contact</span><span class="lang-zh">联系方式</span></h2>
         <p>Email: <a href="mailto:1712794418@qq.com">1712794418@qq.com</a></p>
       </section>
     </main>
@@ -68,5 +108,19 @@
       <p>&copy; 2026 Canyang Chen</p>
     </footer>
   </div>
+
+  <script>
+    const btn = document.getElementById('lang-toggle');
+    const apply = (lang) => {
+      document.body.classList.toggle('zh', lang === 'zh');
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      btn.textContent = lang === 'zh' ? 'EN' : '中文';
+      localStorage.setItem('lang', lang);
+    };
+    btn.addEventListener('click', () => {
+      apply(document.body.classList.contains('zh') ? 'en' : 'zh');
+    });
+    apply(localStorage.getItem('lang') || 'en');
+  </script>
 </body>
 </html>

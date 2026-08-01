@@ -104,6 +104,38 @@ footer {
   text-align: center;
 }
 
+#lang-toggle {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  z-index: 10;
+  padding: 6px 16px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #1a5fb4;
+  background: #fff;
+  border: 1px solid #1a5fb4;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#lang-toggle:hover {
+  background: #1a5fb4;
+  color: #fff;
+}
+
+.lang-zh {
+  display: none;
+}
+
+body.zh .lang-en {
+  display: none;
+}
+
+body.zh .lang-zh {
+  display: inline;
+}
+
 @media (max-width: 600px) {
   header {
     flex-direction: column;
