@@ -120,12 +120,11 @@
       document.body.classList.toggle('zh', lang === 'zh');
       document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
       btn.textContent = lang === 'zh' ? 'EN' : '中文';
-      localStorage.setItem('lang', lang);
     };
     btn.addEventListener('click', () => {
       apply(document.body.classList.contains('zh') ? 'en' : 'zh');
     });
-    apply(localStorage.getItem('lang') || 'en');
+    apply('en');
   </script>
 </body>
 </html>
